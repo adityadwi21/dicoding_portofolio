@@ -1,0 +1,327 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Layout Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+/* Content Layout */
+#content {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Article Styles */
+article {
+  flex: 2;
+  background-color: #eaf6ff;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+article section {
+  margin-bottom: 8px;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+article p,
+article ul {
+  font-size: 1rem;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Skill Images */
+.skill-image {
+  width: 100px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation class */
+.skill-image.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Aside Styles */
+aside {
+  flex: 1;
+  background-color: #e4e4e4;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+aside img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+aside .biodata h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+aside .biodata ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside .biodata li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  display: flex;
+  align-items: center;
+}
+
+.linkedin-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.gmail-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.social-links a {
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Slider Styles */
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slides img {
+  width: 100%;
+  max-width: 100px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  #content {
+    flex-direction: column;
+  }
+
+  article,
+  aside {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-image {
+    width: 80px;
+  }
+
+  aside img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  article h2 {
+    font-size: 1.5rem;
+  }
+
+  article p,
+  article ul {
+    font-size: 0.9rem;
+  }
+
+  .skills-container {
+    gap: 10px;
+  }
+
+  .skill-image {
+    width: 70px;
+  }
+
+  aside img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  article h2 {
+    font-size: 1.3rem;
+  }
+
+  article p,
+  article ul {
+    font-size: 0.85rem;
+  }
+
+  aside .biodata h3 {
+    font-size: 1.3rem;
+  }
+
+  aside .biodata li {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
